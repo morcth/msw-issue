@@ -1,10 +1,7 @@
 <script setup>
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from "./supabase";
 import { ref } from "vue";
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 
-const supabase = createClient(supabaseUrl, supabaseKey);
 const loading = ref(false);
 
 const onSubmit = async () => {
